@@ -11,7 +11,7 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/gurzi/conv/internal/value"
+	"github.com/asakue/conv/internal/value"
 )
 
 // YAMLCodec реализует формат YAML (реализация gopkg.in/yaml.v3).

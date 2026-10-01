@@ -9,7 +9,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/gurzi/conv/internal/value"
+	"github.com/asakue/conv/internal/value"
 )
 
 // JSONCodec реализует формат JSON (RFC 8259).

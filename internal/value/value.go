@@ -108,6 +108,42 @@ func (v Value) Keys() []string {
 	return keys
 }
 
+// BoolVal возвращает значение для TypeBool (false для остальных типов).
+func (v Value) BoolVal() bool {
+	if v.Type != TypeBool {
+		return false
+	}
+	b, _ := v.Value.(bool)
+	return b
+}
+
+// IntVal возвращает значение для TypeInt (0 для остальных типов).
+func (v Value) IntVal() int64 {
+	if v.Type != TypeInt {
+		return 0
+	}
+	i, _ := v.Value.(int64)
+	return i
+}
+
+// FloatVal возвращает значение для TypeFloat (0 для остальных типов).
+func (v Value) FloatVal() float64 {
+	if v.Type != TypeFloat {
+		return 0
+	}
+	f, _ := v.Value.(float64)
+	return f
+}
+
+// StrVal возвращает значение для TypeString ("") для остальных типов.
+func (v Value) StrVal() string {
+	if v.Type != TypeString {
+		return ""
+	}
+	s, _ := v.Value.(string)
+	return s
+}
+
 // Constructors ---------------------------------------------------------------
 
 func NewNil() Value                  { return Value{Type: TypeNil} }

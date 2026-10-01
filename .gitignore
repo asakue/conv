@@ -1,6 +1,4 @@
 # Binaries
-conv
-conv.exe
 *.exe
 
 # Build artifacts
@@ -21,3 +19,7 @@ conv.exe
 # OS
 .DS_Store
 Thumbs.db
+
+# Go tools & version
+.go-ver.txt
+.tools/

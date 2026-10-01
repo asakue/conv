@@ -12,6 +12,9 @@ import (
 // Format — идентификатор формата данных.
 type Format string
 
+// Unknown — формат не определён.
+const Unknown Format = ""
+
 // Поддерживаемые форматы.
 const (
 	JSON Format = "json"

@@ -9,7 +9,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/gurzi/conv/internal/value"
+	"github.com/asakue/conv/internal/value"
 )
 
 // TOMLCodec реализует формат TOML v1.0 (github.com/BurntSushi/toml).

@@ -3,7 +3,23 @@ package value
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 )
+
+// anyToString превращает произвольное Go-значение в строку для
+// скалярного представления (fallback в FromAny).
+func anyToString(v any) string {
+	switch val := v.(type) {
+	case string:
+		return val
+	case fmt.Stringer:
+		return val.String()
+	case error:
+		return val.Error()
+	default:
+		return fmt.Sprintf("%v", val)
+	}
+}
 
 // Compact возвращает JSON-подобное представление значения в одну строку.
 //
